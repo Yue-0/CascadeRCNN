@@ -1,0 +1,9 @@
+.idea
+model
+inputs
+outputs
+dataset/test
+dataset/train
+PaddleDetection
+dataset/test.json
+dataset/train.json

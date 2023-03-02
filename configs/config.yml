@@ -1,0 +1,20 @@
+_BASE_: [
+  "model.yml",
+  "reader.yml",
+  "optimizer.yml",
+  "../dataset/dataset.yml"
+]
+
+use_gpu: true
+use_xpu: false
+log_iter: 20
+save_dir: output
+snapshot_epoch: 1
+print_flops: false
+
+export:
+  post_process: True
+  nms: True
+  benchmark: False
+
+weights: parameters/CascadeRCNN

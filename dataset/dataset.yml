@@ -1,0 +1,20 @@
+metric: COCO
+num_classes: 0  # Number of classes in your dataset
+
+TrainDataset:
+  !COCODataSet
+    image_dir: train
+    anno_path: train.json
+    dataset_dir: ../dataset
+    data_fields: ["image", "gt_bbox", "gt_class", "is_crowd"]
+
+EvalDataset:
+  !COCODataSet
+    image_dir: test
+    anno_path: test.json
+    dataset_dir: ../dataset
+
+TestDataset:
+  !ImageFolder
+    anno_path: test.json
+    dataset_dir: ../dataset
